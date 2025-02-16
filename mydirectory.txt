@@ -1,0 +1,14 @@
+BasicPaintProgram/
+├── src/
+│   └── com/
+│       └── example/
+│           └── paint/
+│               ├── BasicPaintProgram.java
+│               ├── PaintPanel.java
+│               ├── TracingPadPanel.java
+│               ├── LessonsPanel.java
+│               ├── VideoPlayerPanel.java
+│               └── FileHandler.java
+└── resources/
+    ├── tracing_background.png
+    └── sample_video.mp4
