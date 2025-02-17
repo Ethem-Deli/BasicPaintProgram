@@ -1,14 +1,16 @@
 BasicPaintProgram/
+├── pom.xml
 ├── src/
-│   └── com/
-│       └── example/
-│           └── paint/
-│               ├── BasicPaintProgram.java
-│               ├── PaintPanel.java
-│               ├── TracingPadPanel.java
-│               ├── LessonsPanel.java
-│               ├── VideoPlayerPanel.java
-│               └── FileHandler.java
-└── resources/
-    ├── tracing_background.png
-    └── sample_video.mp4
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           ├── BasicPaintProgram.java
+│   │   │           ├── TracingPadPanel.java 
+│   │   │           ├── PaintPanel.java
+│   │   │           ├── VideoPlayerPanel.java
+│   │   │           └── FileHandler.java
+│   │   └── resources/
+│   │       └── tracing_background.png
+│   └── test/
+└── target/

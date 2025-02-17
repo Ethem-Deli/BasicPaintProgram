@@ -1,50 +1,125 @@
-# BasicPaintProgram
-Basic Paint Program: Create a simple paint program with drawing tools like brushes, shapes, and colors also additional make for children add tracing pads, videos and educational things
-# Basic Paint Program
+                                                               Basic Paint Program
+Overview
+The Basic Paint Program is an interactive Java-based drawing application tailored for children. It includes essential drawing tools such as brushes, shapes, and colors. Additionally, it provides educational features, including a tracing pad, drawing lessons, and an embedded video player.
+This project is built using Java Swing for the UI and JavaFX for multimedia functionalities, with dependencies such as iText for PDF export.
 
-## Overview
-This is a basic Java paint program designed with educational features for children. It includes core drawing functionalities such as brush, eraser, shape drawing (rectangle, circle, line), and color/brush size selection. Additionally, it provides file operations for saving and loading images, as well as educational features including a tracing pad, drawing lessons, and an embedded video player.
+⚙ Features
+🎨 Core Drawing Tools
+Freehand brush tool
+Eraser tool
+Shape drawing (Rectangle, Circle, Line
+Color selection and brush size adjustment
 
-## Features
-- **Core Drawing Tools**: Brush, eraser, shapes (rectangle, circle, line), color selection, and adjustable brush size.
-- **File Operations**: Save drawings as PNG or JPG, open existing images, and clear the canvas.
-- **Educational Tools**:
-  - **Tracing Pad**: Preloaded background image for tracing.
-  - **Drawing Lessons**: Step-by-step drawing instructions.
-  - **Video Player**: Embedded media player to play educational videos.
-- **User Interface**: Built using Java Swing with a child-friendly layout and toolbar.
+📂 File Operations
+Save drawings as PNG, JPG, and PDF
+Load existing images
+Clear canvas
 
-## Installation
-1. **Prerequisites**:
-   - Java Development Kit (JDK) 8 or higher.
-   - If using JavaFX (for the video player), ensure that JavaFX libraries are available. (For JDK 11 and above, you may need to download OpenJFX separately.)
-2. **Project Structure**:
-   - `src/`: Contains the Java source files.
-   - `resources/`: Contains resource files such as `tracing_background.png` and `sample_video.mp4`.
-3. **Build Instructions**:
-   - Compile the source files using your preferred IDE or via the command line. For example:
-     ```bash
-     javac -cp . src/com/example/paint/*.java
-     java -cp . com.example.paint.BasicPaintProgram
-     ```
+🎓 Educational Features
+Tracing Pad: Preloaded background image for tracing
+Drawing Lessons: Step-by-step instructional guides
+Embedded Video Player: Educational video playback
 
-## Usage
-- **Paint Tab**: Use the toolbar to select different drawing tools, choose a color, and adjust the brush size. File operations (Save, Open, Clear) are available on the toolbar.
-- **Tracing Pad Tab**: Trace over the preloaded image.
-- **Lessons Tab**: Read through the drawing lessons.
-- **Videos Tab**: Watch the embedded educational video.
+🛠 Installation & Setup
+📉 Prerequisites
+Ensure you have the following installed:
+Java Development Kit (JDK 11) (or higher)
+Apache Maven (for dependency management)
+JavaFX SDK (for video functionality)
 
-## Dependencies
-- **Java Swing**: For UI components.
-- **JavaFX**: For embedded video playback (via `JFXPanel`). Ensure JavaFX libraries are properly set up if using JDK 11 or later.
+📁 Project Structure
+BasicPaintProgram/
+|-- src/main/java/com/example/paint/
+|   |-- BasicPaintProgram.java        # Main class
+|   |-- PaintPanel.java               # Core drawing functions
+|   |-- TracingPadPanel.java          # Tracing pad feature
+|   |-- LessonsPanel.java             # Drawing lessons
+|   |-- VideoPlayerPanel.java         # Embedded video player
+|   |-- FileHandler.java              # Handles file operations
+|
+|-- resources/                        # Assets folder
+|   |-- tracing_background.png        # Background image for tracing
+|   |-- sample_video.mp4              # Video for educational purposes
+|
+|-- pom.xml                            # Maven build configuration
+|-- README.md                          # Project documentation
 
-## Code Structure
-- **BasicPaintProgram.java**: Main class that initializes the application and tabs.
-- **PaintPanel.java**: Handles core drawing operations.
-- **TracingPadPanel.java**: Provides the tracing pad feature.
-- **LessonsPanel.java**: Contains drawing lessons.
-- **VideoPlayerPanel.java**: Embeds a video player using JavaFX.
-- **FileHandler.java**: Handles file save and open operations.
+📦 Dependencies
+The project uses the following dependencies in Maven (pom.xml):
+<dependencies>
+    <!-- iText PDF Library for PDF export -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>itextpdf</artifactId>
+        <version>5.5.13.4</version>
+    </dependency>
 
-## License
-This project is provided as-is for educational purposes.
+    <!-- JavaFX Dependencies -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>21</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-media</artifactId>
+        <version>21</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-swing</artifactId>
+        <version>21</version>
+    </dependency>
+</dependencies>
+
+🚀 Running the Application
+🔧 Build & Run Instructions
+Open a terminal and navigate to the project directory:
+cd D:\BYU\cse310\BasicPaintProgram
+Set up Java 11 environment:
+set JAVA_HOME="C:\Program Files\Eclipse Adoptium\jdk-11.0.26.4-hotspot"
+set PATH=%JAVA_HOME%\bin;%PATH%
+Check if Maven is properly set up:
+mvn -version
+Build the project (only needed if you've modified the code):
+mvn clean install
+Run the program:
+mvn javafx:run
+
+Alternatively, you can run the compiled JAR file:
+java -jar target/BasicPaintProgram-1.0-SNAPSHOT.jar
+
+📝 Usage Guide
+🎨 Paint Tab
+Select different drawing tools
+Choose colors and adjust brush size
+Save, Open, or Clear canvas
+
+📜 Tracing Pad Tab
+Trace over a preloaded background image
+
+📚 Lessons Tab
+Follow step-by-step drawing tutorials
+
+📹 Videos Tab
+Watch educational videos embedded in the program
+
+🛠 Troubleshooting
+Issue: JavaFX Not Found
+✅ Ensure you have JavaFX SDK installed and set up correctly.
+Issue: "Unsupported file format" when saving
+✅ Ensure file extensions are properly added when saving.
+Issue: "TracingPadPanel.java is not on the classpath"
+✅ Update .vscode/settings.json with:
+{
+    "java.project.sourcePaths": ["src/main/java"]
+}
+✅ Then, restart VS Code and clean the project:
+
+mvn clean compile
+
+📄 License
+This project is provided for educational purposes and is open-source.
+
+📉 Author
+Developed as part of CSE310 - BYU Java Programming Course 🏫
